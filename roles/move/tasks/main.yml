@@ -19,4 +19,4 @@
   
   - name: Print version
     debug: 
-      msg: "Ansible move: {{ filemove }}"l
+      msg: "Ansible move: {{ filemove }}"
