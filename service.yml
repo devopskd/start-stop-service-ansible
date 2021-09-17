@@ -2,6 +2,4 @@
 - hosts: ubuntu
   become: true
   roles:
-    - apache
-    - move
     - copyfile
