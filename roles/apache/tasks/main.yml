@@ -21,3 +21,12 @@
 
       echo -e "\nStarting the looker"
       sudo systemctl start apache2
+
+    args:
+       chdir: "/apps/tomcat/"
+    register: fileout
+    tags: fileout 
+  
+  - name: Print version
+    debug: 
+      msg: "Ansible Version: {{ fileout.stdout_line }}"
