@@ -1,5 +1,5 @@
 ---
-  - name: Restart Apache
+  - name: Stop Apache and list directory
     shell: |
       echo -e "\n Stopping the looker service and login with looker user"
       sudo systemctl stop apache2
@@ -11,9 +11,6 @@
         
       echo -e "\nDirectory listing"
       ls /var/www/html/
-
-      echo -e "\nStarting the looker"
-      sudo systemctl start apache2
 
     args:
        chdir: "/home/ubuntu/"

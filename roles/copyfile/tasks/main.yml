@@ -9,6 +9,9 @@
     shell: | 
       echo -e "\nDirectory listing"
       ls /var/www/html/
+    
+    notify:
+      - Start Apache  
       
     args:
        chdir: "/home/ubuntu/"

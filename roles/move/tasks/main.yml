@@ -1,6 +1,6 @@
 ---
   - name: Move files
-    command: mv /home/ubuntu/test123.txt /var/www/html
+    command: mv /home/ubuntu/test123.txt /var/www/html/test123_{{ansible_date_time.date}}.txt
 
   - name: list directory
     shell: | 
