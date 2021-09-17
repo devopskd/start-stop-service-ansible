@@ -2,6 +2,9 @@
   - name: Move files
     command: mv /home/ubuntu/test123.txt /var/www/html/test123_{{ansible_date_time.date}}.txt
 
+  - name: Move files
+    command: mv /home/ubuntu/test235.txt /var/www/html/test235_{{ansible_date_time.date}}.txt  
+
   - name: list directory
     shell: | 
       echo -e "\n Present working directory is" `pwd`
@@ -16,4 +19,4 @@
   
   - name: Print version
     debug: 
-      msg: "Ansible move: {{ filemove }}"
+      msg: "Ansible move: {{ filemove }}"l
