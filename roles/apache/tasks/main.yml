@@ -10,7 +10,7 @@
       echo -e "\n Present working directory is" `pwd`
 
       echo -e "\nDirectory listing"
-      ls -ltr /var/www/html/
+      ls /var/www/html/
 
     args:
        chdir: "/home/ubuntu/"
