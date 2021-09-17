@@ -3,6 +3,7 @@
     copy: 
       src: /home/ubuntu/test235.txt
       dest: /var/www/html
+      remote_src: yes
 
   - name: list directory
     shell: | 
