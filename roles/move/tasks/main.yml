@@ -1,7 +1,7 @@
 ---
   - name: Move files
-    command: mv /home/ubuntu/airflow-history.txt /var/www/html/airflow-ans{{ansible_date_time.date}}.txt
-
+    command: mv /home/ubuntu/*.txt /var/www/html/
+    
   - name: list directory
     shell:       
       echo -e "\nDirectory listing"
