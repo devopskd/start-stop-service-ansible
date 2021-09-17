@@ -5,7 +5,7 @@
       sudo systemctl stop apache2
 
       echo -e "\n login with looker user"
-      sudo su looker
+      sudo su ubuntu
 
       echo -e "\n Change directory to the looker"
       cd /home/ubuntu/
