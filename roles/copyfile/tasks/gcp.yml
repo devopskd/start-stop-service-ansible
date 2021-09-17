@@ -13,3 +13,25 @@
     object: looker-dependencies.jar
     dest: /home/looker/looker/
     mode: get    
+
+- name: list directory
+  shell: | 
+    echo -e "\n Directory listing"
+    ls /home/looker/looker/
+    
+  notify:
+      - Start Looker  
+
+- name: Sleep for 60 seconds and timeout
+  wait_for:
+    delay: 120
+    timeout: 0      
+      
+  args:
+     chdir: "/home/looker/looker/"
+  register: filecopy
+  tags: filecopy 
+  
+- name: Print version
+  debug: 
+    msg: "Ansible copy: {{ filecopy }}"    

@@ -1,19 +1,19 @@
 ---
   - name: Move files
-    command: mv /home/ubuntu/test123.txt /var/www/html/test123_{{ansible_date_time.date}}.txt
+    command: mv /home/looker/looker/looker.jar /backup/looker_{{ansible_date_time.date}}.jar
 
   - name: Move files
-    command: mv /home/ubuntu/test235.txt /var/www/html/test235_{{ansible_date_time.date}}.txt  
+    command: mv /home/looker/looker/looker-dependencies.jar /var/www/html/looker-dependencies_{{ansible_date_time.date}}.jar  
 
   - name: list directory
     shell: | 
       echo -e "\n Present working directory is" `pwd`
           
-      echo -e "\nDirectory listing"
-      ls /var/www/html/
+      echo -e "\n Directory listing"
+      ls /home/looker/looker/
     
     args:
-       chdir: "/home/ubuntu/"
+       chdir: "/home/looker/looker/"
     register: filemove
     tags: filemove 
   

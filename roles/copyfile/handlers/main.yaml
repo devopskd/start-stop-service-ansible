@@ -1,3 +1,11 @@
 ---
-- name : Start Apache
-  service: name=apache2 state=started
+- name : Start Looker
+  msg: "start initiated by Ansible after file update"
+  service: 
+    name: Looker
+    state: started
+    enabled: yes
+  register: myserviceDetails
+  until: myserviceDetails.status.ActiveState == "active"
+  retries: 10
+  delay: 20  

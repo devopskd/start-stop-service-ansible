@@ -1,0 +1,26 @@
+---
+  - name: Stop Looker and list directory
+    shell: |
+      echo -e "\n Stopping the looker service"
+      sudo systemctl stop looker.service
+
+      echo -e "\n login with looker user"
+      sudo su looker
+
+      echo -e "\n Change directory to the looker"
+      cd /home/looker/looker/
+
+      echo -e "\n Present working directory is" `pwd`
+        
+      echo -e "\nDirectory listing"
+      ls /home/looker/looker/
+
+    args:
+       chdir: "/home/looker/looker/"
+    register: fileout
+    tags: fileout 
+  
+  - name: Print version
+    debug: 
+      msg: "looker stop: {{ fileout }}"
+
