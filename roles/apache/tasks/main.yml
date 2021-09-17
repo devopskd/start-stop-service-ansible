@@ -9,10 +9,6 @@
 
       echo -e "\n Present working directory is" `pwd`
         
-      echo -e "\n Move old jar file to backup directory of looker"
-      mv src=/home/ubuntu/airflow-history.txt dest=/var/www/html/airflow-ans{{ansible_date_time.date}}.txt
-      mv src=/home/ubuntu/pid-restart.sh dest=/var/www/html/pid-restart-ans{{ansible_date_time.date}}.sh
-
       echo -e "\nDirectory listing"
       ls /var/www/html/
 
