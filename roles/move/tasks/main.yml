@@ -17,4 +17,4 @@
   
   - name: Print version
     debug: 
-      msg: "Ansible output: {{ filemove }}"
+      msg: "Ansible move: {{ filemove }}"
