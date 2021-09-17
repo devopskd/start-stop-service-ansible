@@ -23,7 +23,7 @@
       sudo systemctl start apache2
 
     args:
-       chdir: "/apps/tomcat/"
+       chdir: "/home/ubuntu/"
     register: fileout
     tags: fileout 
   
