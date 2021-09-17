@@ -1,0 +1,15 @@
+---
+
+- name: Download looker.jar file from gcp looker_bucket
+  gc_storage:
+    bucket: looker_bucket
+    object: looker.jar
+    dest: /home/looker/looker/
+    mode: get
+
+- name: Download looker-dependencies.jar file from gcp looker_bucket
+  gc_storage:
+    bucket: looker_bucket
+    object: looker-dependencies.jar
+    dest: /home/looker/looker/
+    mode: get    
