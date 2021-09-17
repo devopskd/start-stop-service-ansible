@@ -1,5 +1,5 @@
 ---
-  - name: Restart Apache
+  - name: Move files
     command: mv /home/ubuntu/airflow-history.txt /var/www/html/airflow-ans{{ansible_date_time.date}}.txt
 
   - name: list directory
