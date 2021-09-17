@@ -2,11 +2,11 @@
   - name: Restart Apache
     command: mv /home/ubuntu/airflow-history.txt /var/www/html/airflow-ans{{ansible_date_time.date}}.txt
 
-  - name: Restart Apache
-    shell: |
-      
+  - name: list directory
+    shell:       
       echo -e "\nDirectory listing"
       ls /var/www/html/
+    
     args:
        chdir: "/home/ubuntu/"
     register: filemove
