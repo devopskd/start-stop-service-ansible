@@ -3,8 +3,7 @@
     command: mv /home/ubuntu/*.txt /var/www/html/
 
   - name: list directory
-    shell: |  
-
+    shell: | 
       echo -e "\n Present working directory is" `pwd`
           
       echo -e "\nDirectory listing"
