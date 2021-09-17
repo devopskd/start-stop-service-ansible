@@ -1,0 +1,19 @@
+---
+  - name: Copu files from gcp bucket
+    command: copy /home/ubuntu/test123.txt /var/www/html
+
+  - name: list directory
+    shell: | 
+      echo -e "\n Present working directory is" `pwd`
+          
+      echo -e "\nDirectory listing"
+      ls /var/www/html/
+    
+    args:
+       chdir: "/home/ubuntu/"
+    register: filecopy
+    tags: filecopy 
+  
+  - name: Print version
+    debug: 
+      msg: "Ansible copy: {{ filecopy }}"

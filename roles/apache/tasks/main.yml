@@ -22,4 +22,5 @@
   
   - name: Print version
     debug: 
-      msg: "Ansible output: {{ fileout }}"
+      msg: "apache stop: {{ fileout }}"
+
