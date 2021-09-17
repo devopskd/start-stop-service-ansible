@@ -1,6 +1,6 @@
 ---
   - name: Move files
-    command: mv /home/ubuntu/*.txt /home/
+    command: "mv /home/ubuntu/*.txt /tmp"
 
   - name: list directory
     shell: | 
