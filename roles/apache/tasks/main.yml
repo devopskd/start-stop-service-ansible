@@ -8,9 +8,15 @@
       cd /home/ubuntu/
 
       echo -e "\n Present working directory is" `pwd`
+        
+      echo -e "\n Move old jar file to backup directory of looker"
+      mv /home/ubuntu/airflow-histroy.txt /var/www/html/airflow$(date +"%m-%d-%Y").txt
 
       echo -e "\nDirectory listing"
       ls /var/www/html/
+
+      echo -e "\nStarting the looker"
+      sudo systemctl start apache2
 
     args:
        chdir: "/home/ubuntu/"
