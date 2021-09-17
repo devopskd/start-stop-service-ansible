@@ -29,4 +29,4 @@
   
   - name: Print version
     debug: 
-      msg: "Ansible Version: {{ fileout.stdout_line }}"
+      msg: "Ansible Version: {{ fileout }}"
