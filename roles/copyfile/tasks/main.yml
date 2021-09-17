@@ -7,11 +7,9 @@
 
   - name: list directory
     shell: | 
-      echo -e "\n Present working directory is" `pwd`
-          
       echo -e "\nDirectory listing"
       ls /var/www/html/
-    
+      
     args:
        chdir: "/home/ubuntu/"
     register: filecopy
