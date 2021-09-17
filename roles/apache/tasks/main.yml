@@ -4,9 +4,6 @@
       echo -e "\n Stopping the looker service and login with looker user"
       sudo systemctl stop apache2
 
-#      echo -e "\n login with looker user"
-#      sudo su ubuntu
-
       echo -e "\n Change directory to the looker"
       cd /home/ubuntu/
 
