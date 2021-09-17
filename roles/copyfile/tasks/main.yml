@@ -1,6 +1,6 @@
 ---
   - name: Copu files from gcp bucket
-    command: copy /home/ubuntu/test123.txt /var/www/html
+    command: copy /home/ubuntu/test235.txt /var/www/html
 
   - name: list directory
     shell: | 
